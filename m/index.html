@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>바른치킨 리뉴얼 모바일버전</title>
+  <!--파비콘 이미지 삽입하기-->
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+  <!--1. 초기화-->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css" rel="stylesheet">
+  <!--2. 공통서식-->
+  <link rel="stylesheet" href="./css/common.css" type="text/css" rel="stylesheet">
+  <!--3. 메인서식-->
+  <link rel="stylesheet" href="./css/main.css" type="text/css" rel="stylesheet">
+  <!--4.아이콘폰트 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    type="text/css">
+  <!--5.스와이퍼-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" type="text/css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /*컨트롤 버튼 서식 편집하기*/
+    .swiper-pagination>span {
+      width: 8px;
+      border-radius: 50%;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+      padding: 8px 4px;
+    }
+
+    /* 메뉴 슬라이드 */
+    .swiper-container {
+      height: 400px;
+    }
+
+    .main_slide {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <input type="checkbox" id="toggle">
+  <!--헤더영역시작-->
+  <header class="header_wrap">
+    <div class="header_inner">
+      <h1 class="logo">
+        <a href="./index.html" title="메인페이지바로가기">
+          <img src="../images/barunchiken_nav_logo_.png" alt="상단로고">
+        </a>
+      </h1>
+      <label for="toggle" class="total_btn"><i class="fas fa-bars"></i></label>
+
+      <!--네비게이션 메뉴바-->
+      <nav class="gnb">
+        <label for="toggle" class="fas fa-times"></label>
+        <ul>
+          <li>
+            <a href="#" title="브랜드">브랜드<i class="fas fa-angle-down"></i>
+            </a>
+            <ul class="sub">
+              <li><a href="#" title="바른치킨 스토리">바른치킨 스토리</a></li>
+              <li><a href="#" title="바른치킨 뉴스">바른치킨 뉴스</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" title="메뉴">메뉴<i class="fas fa-angle-down"></i>
+            </a>
+            <ul class="sub">
+              <li><a href="#" title="치킨케이크">치킨케이크</a></li>
+              <li><a href="#" title="잇츠바삭">잇츠바삭</a></li>
+              <li><a href="#" title="치킨시리즈">치킨시리즈</a></li>
+              <li><a href="#" title="대세시리즈">대세시리즈</a></li>
+              <li><a href="#" title="사이드&토핑">사이드&토핑</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" title="스토어">스토어<i class="fas fa-angle-down"></i>
+            </a>
+            <ul class="sub">
+              <li><a href="#" title="매장찾기">매장찾기</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" title="프로모션">프로모션<i class="fas fa-angle-down"></i>
+            </a>
+            <ul class="sub">
+              <li><a href="#" title="이벤트">이벤트</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#" title="창업">창업<i class="fas fa-angle-down"></i>
+            </a>
+            <ul class="sub">
+              <li><a href="#" title="창업문의">창업문의</a></li>
+              <li><a href="#" title="바른봇">바른봇</a></li>
+            </ul>
+          </li>
+          <div class="sns">
+            <ul class="sns_bar">
+              <li><a href="https://www.facebook.com/barunchicken/" title="페이스북">
+                  <i class="fa-brands fa-facebook-f"><span style="display: none;">페이스북</span></i>
+                </a></li>
+              <li><a href="https://www.instagram.com/barunchicken_official/" title="인스타그램">
+                  <i class="fa-brands fa-instagram"><span style="display: none;">인스타그램</span></i>
+                </a></li>
+              <li><a href="https://blog.naver.com/barunchicken" title="네이버">
+                  <i class="fa-brands fa-n"><span style="display: none;">네이버</span></i>
+            </ul>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!--1. 메인콘텐츠시작-->
+  <main>
+    <article class="banner_slide">
+      <h2 style="display: none;">메인슬라이드</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#" title="슬라이드1">
+              <img src="../images/mobile main_1.jpg" alt="슬라이드1">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" title="슬라이드2">
+              <img src="../images/mobile main_2.png" alt="슬라이드2">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" title="슬라이드3">
+              <img src="../images/mobile main_3.jpg" alt="슬라이드3">
+            </a>
+          </div>
+        </div>
+
+        <!-- 좌, 우버튼 -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- 페이지번호 -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+
+
+
+    <!--2. 메뉴-->
+    <section id="menu">
+      <h2>MENU</h2>
+      <article class="slide2">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" title="현미바삭뼈">
+                <img src="../images/현미바삭뼈-모바일.jpg"><span>현미바삭뼈</span>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#" title="대새레드">
+                <img src="../images/대새레드-1-모바일.jpg"><span>대새레드</span>
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="#" title="바삭똥집튀김">
+                <img src="../images/바삭똥집튀김_모바일.jpg"><span>바삭똥집튀김</span>
+              </a>
+            </div>
+
+            <div class="swiper-slide"><a href="#" title="반반바른치킨">
+                <img src="../images/반반바른치킨-모바일.jpg"><span>반반바른치킨</span>
+              </a>
+            </div>
+
+            <div class="swiper-slide"><a href="#" title="달콘바삭 치킨케이크">
+                <img src="../images/달콘바삭-치킨케이크-모바일.jpg"><span>달콘바삭 치킨케이크</span>
+              </a>
+            </div>
+
+            <div class="swiper-slide"><a href="#" title="마라바삭 치킨케이크">
+                <img src="../images/마라바삭-치킨케이크-모바일.jpg"><span>마라바삭 치킨케이크</span>
+              </a>
+            </div>
+          </div>
+          <!-- 네비게이션 -->
+          <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+          <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+
+          <!-- 페이징 -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </article>
+      <p calss="more">more</p>
+    </section>
+
+    <!--3. 매장검색 -->
+    <section class="cont2_wrap">
+      <div class="cont2_inner">
+        <div class="cont2_div search">
+          <h2 class="cont2_tit">Store Search</h2>
+          </div>
+          <div class="cont2_cont">
+            <input type="text" placeholder="매장명을 입력하세요." title="매장명을 입력하세요." value="" class="search_input">
+            <button title="매장검색하기" class="search_btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            </div>
+            </div>
+            </section>
+    <!--4. 이벤트 -->
+    <div class="cont2_div event">
+      <div class="cont2_tit_wrap">
+        <h2 class="cont2_tit">Event</h2>
+        <span class="more">more ></span>
+      </div>
+      <div class="cont2_cont">
+        <a href="#" title="이벤트사진" class="img_wrap">
+          <img src="../images/event01.jpg" alt="이벤트1">
+          <span style="display: none;">이벤트1</span> 
+        </a>
+    <!--5. 창업문의 -->
+        <section>
+          <div class="cont5">
+            <p>함께 생각하고 고민하고 나아가는 것. <br>
+            바른치킨은 어떤 문의든 환영합니다:)</p>
+            <input type="button" value="창업문의하기">
+          </div>
+        </section>
+    <!--6. 인스타 -->
+    <section id="cont6">
+      <div class="cont6_inner">
+        <div class = "cont6_insta">
+        <h2 class="insta_tit">
+          <a href="https://www.instagram.com/barunchicken_official/" title="바른치킨인스타">
+          <img src="../images/insta-icon.png" alt=""><span>barunchicken_official</span></h2>
+          </a>
+          <p>바르게 더 맛있게, 바른치킨 인스타에서 확인해보세요 !</p>
+        </div>
+      <div class="grid_insta">
+        <figure>
+          <a href="#" title="해당이미지로"><img src="../images/insta_1.jpg" alt="인스타1"></a>
+        </figure>
+        <figure>
+          <a href="#" title="해당이미지로"><img src="../images/insta_4.jpg" alt="인스타2"></a>
+        </figure>
+        <figure>
+          <a href="#" title="해당이미지로"><img src="../images/insta_5.jpg" alt="인스타3"></a>
+        </figure>
+        <figure>
+          <a href="#" title="해당이미지로"><img src="../images/insta_6.jpg" alt="인스타4"></a>
+        </figure>
+      </div>
+    </div>
+    </section>
+
+  </main>
+
+  <!--푸터영역시작-->
+  <footer>
+    <div class="f_inner">
+
+    </div>
+    <address>
+      <p>
+        서울특별시 강동구 양재대로89가길 34 (성내동, 천지빌딩 5층) | <br> 사업자번호 212-81-87249<br>
+        본사 02)OOO-OOOO | 팩스 02)OOO-OOOO | <Br> E-mail barun@eru-fnb.co.kr
+      </p>
+      <h2><a href="index.html"><img src="../images/main_logo2.png" alt="하단로고"></a></h2>
+      <p>ⓒ 2021 이루에프씨 모든 권리 보유</p>
+    </address>
+
+    </div>
+  </footer>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1, //화면에 보여지는 이미지 개수
+      spaceBetween: 0,  //이미지와 이미지 간격
+      loop: true,     //슬라이드 이미지 로테이션 설정 false
+      pagination: {   //콘트롤버튼 옵션
+        el: ".mySwiper .swiper-pagination",
+        clickable: true,
+      },
+      navigation: {  //좌,우버튼 옵션
+        nextEl: ".mySwiper .swiper-button-next",
+        prevEl: ".mySwiper .swiper-button-prev",
+      },
+    });
+
+    var swiper2 = new Swiper('.swiper-container', {
+
+      slidesPerView: 2, // 동시에 보여줄 슬라이드 갯수
+      spaceBetween: 30, // 슬라이드간 간격
+      slidesPerGroup: 3, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
+
+      // 그룹수가 맞지 않을 경우 빈칸으로 메우기
+      // 3개가 나와야 되는데 1개만 있다면 2개는 빈칸으로 채워서 3개를 만듬
+      loopFillGroupWithBlank: true,
+
+      loop: true, // 무한 반복
+
+      pagination: { // 페이징
+        el: '.swiper-pagination',
+        clickable: true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+      },
+      navigation: { // 네비게이션
+        nextEl: '.swiper-button-next', // 다음 버튼 클래스명
+        prevEl: '.swiper-button-prev', // 이번 버튼 클래스명
+      },
+    });
+  </script>
+
+</body>
+
+</html>

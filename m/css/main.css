@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/*1. 메인슬라이드*/
+.banner_slide{
+  height:500px;
+}
+.banner_slide .swiper-slide img {
+  height: 100%;
+}
+
+#menu > h2{
+  font-size:18px;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+/*6. 인스타 */
+#cont6 {
+  width: 100%;
+  height: 700x;
+  background-color: rgba(225, 199, 148, 0.4);
+  margin: 0 auto;
+  position: relative;
+}
+
+#cont6>.cont4_inner {
+  width: 390px;
+  margin: 0 auto;
+}
+
+#cont4>.cont4_inner>.cont4_insta .insta_tit {
+  font-size: 18px;
+  color: #881824;
+}
+
+.grid_insta {
+  margin: 5px 0px;
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 230px);
+}
+
+.grid_insta img {
+  width: 100%
+}
